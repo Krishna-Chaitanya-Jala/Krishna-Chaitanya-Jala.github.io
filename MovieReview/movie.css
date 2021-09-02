@@ -1,5 +1,5 @@
 body{
-    background-image: url('images/background.png');
+    background-image: url('Images/background.png');
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 8pt;
     background-repeat: repeat;
@@ -10,7 +10,7 @@ body{
 
 .header-back{
     height: 50px;
-    background-image: url('images/bannerbg.png');
+    background-image: url('Images/bannerbg.png');
     width: -webkit-fill-available;	
 }
 .header-box{
@@ -41,7 +41,7 @@ body{
     display: flex;
     color: red;  
     align-items: center;
-    background-image: url("images/rbg.png");
+    background-image: url("Images/rbg.png");
     font-weight: bold;
     font-size: 48pt; 
 }
