@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body background= >
+        <div class="container">
+        <form style="align-items: baseline;" action="http://mumstudents.org/params.php">
+            <table class="tableAlign">
+                <tr>
+                    <td style="text-align: justify;"> <label for="Student-name"> Student Name </label></td>
+                    <td style="text-align: center;"><input type="text" name=Student_name  maxlength="25" placeholder="Student Name" required> </td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"> <label for="Student-ID"> Student ID </label> </td>
+                    <td> <input type="text" name="Student_ID" maxlength="10" placeholder="Student ID" required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: justify;"> <label for="Assignment"> Select Assignment</label> </td>
+                    <td style="text-align: left;"> <select name="Assignment" id="assignment">
+                        <option value="Aboutme">About Me</option>
+                        <option value="Recipe">Recipe</option>
+                        <option value="Movie_Review"> Movie Review </option>
+                        <option value="Grades"> Grades </option>
+                    </select> </td>
+                </tr>
+
+            <tr>
+                <td style="text-align: justify;"> <label for="Entry"> Select Entry </label></td>
+                 <td style="text-align: left;">   <input type="radio" name="Entry" > May 2021 <br>
+                        <input type="radio" name="Entry"> February 2021 <br>
+                        <input type="radio" name="Entry"> November 2020 
+                    </td>
+            </tr>
+            <tr>
+               <td style="text-align: left;"> <label for="lying"> Are you sure that you're looking your grades? </label> </td>
+               <td style="text-align: left;"> <input type="checkbox" name="yes" value="yes">
+                <label for="yes">Yes</label> <br>
+                <input type="checkbox" name="no" value="no">
+                <label for="no">Nah! Looking at others </label>
+                </td>
+            </tr> 
+
+            <tr style="text-align: right;"> <td> <input type="submit" value="submit"> </td> </tr>
+            </table>
+        </form>
+
+        </div>
+    </body>
+</html>
