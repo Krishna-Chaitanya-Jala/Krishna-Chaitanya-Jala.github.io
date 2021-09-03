@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head >
+        <title>Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="signUpStyle.css">
+        <link rel="icon" type="image/png" href="Images/singUp.jpg" re>
+        <h1> <span style="color: rgb(231, 184, 184);">nerd</span><span style="color:rgb(34, 30, 255);">Luv&trade;</span></h1>
+        <h4>where meek geeks meet</h4>
+    </head>
+    <body>
+        <div class="container">
+            <form action="https://www.signup.php">
+                <table style="line-height: 250%;">
+                    <tr>
+                        <td style="text-align: left;"> <label for="Name"> Name: </label> </td>
+                        <td><input type="text" name="Name" placeholder="Name" maxlength="16"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><label for="gender"> Gender: </label></td>
+                        <td style="text-align: left;"><input type="radio" name="gender" required> Male <br>
+                            <input type="radio" name="gender" required> Female <br>
+                            <input type="radio" name="gender" required> Don't want to specify
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"><label for="age"> Age: </label> </td>
+                        <td style="text-align: left;"><input type="number" name="age" placeholder="Age" maxlength="2" required></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"> <label for="personality"> Personality:</label></td>
+                        <td style="text-align: left;"> <input type="text" name="personality" placeholder="personality" maxlength="6"> </td>
+                        <td style="text-align: left;"> <a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp" target="_blank"> 
+                            <p> <span style="color: rgb(229, 255, 0);">(Don't know your type?)</span></p></a></td>
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: left;"> <label for="favOs"> Favorite OS:</label> </td>
+                        <td style="text-align: left;"> <select name="favOs" id="favOs">
+                            <option value="Windows" selected> Windows </option>
+                            <option value="MacOs"> Max OS X </option>
+                            <option value="Linux"> Linux </option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;"> <label for="seeking"> Seeking Age: </label></td>
+                        <td style="text-align: left;"> <input type="number" name="min" placeholder="Min" min="10" max="40" required> to
+                        <input type="number" name="Max" placeholder="Max" maxlength="2" min="40" max="90" required></td>
+                    </tr>
+
+
+                    <tr> <td></td>
+                        <td style="text-align: left;"> <input type="submit" name="signUp" style="color: coral;"> </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
