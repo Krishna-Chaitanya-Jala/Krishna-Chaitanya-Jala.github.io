@@ -1,0 +1,11 @@
+body{
+    background-image: url(Images/clickMe.gif);
+    background-repeat: no-repeat;
+    background-size: 300px 400px;
+    background-position: center top;
+    
+}
+.clickAlign{
+    margin-top: 300px;
+    margin-left: 500px;
+}
