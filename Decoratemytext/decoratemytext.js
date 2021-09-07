@@ -41,18 +41,21 @@ function timerFont() {
     }
 }
 
-function transalteText(){
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-    let newStr = "";
-    let text= document.getElementById("textEditor").value;
+function IgpayAtinlay() {
+    var caseText = document.getElementById("textEditor").value;
+    var splitWords = caseText.split(" "); //to treat each word separatedly
+    var vowelRegExp = '^[aieouAIEOU].*'; //RegExp case for words starting with vowel
 
-    if (vowels.indexOf(text[0]) > -1) {
-        newStr = text + "way";
-        return newStr;
-    } else {
-        let firstMatch = text.match(/[aeiou]/g) || 0;
-        let vowel = str.indexOf(firstMatch[0]);
-        newStr = text.substring(vowel) + text.substring(0, vowel) + "ay";
-        return newStr;
+
+    for (var i = 0; i < splitWords.length; i++) {
+        //if word is single letter or starts with vowel is the same case
+        if (splitWords[i].length === 1 || splitWords[i].match(vowelRegExp)) {
+            splitWords[i] = splitWords[i].concat("ay");
+        }
+        //if word does not start with vowel (could be number, symbol)
+        else {
+            splitWords[i] = splitWords[i].substring(1).concat(splitWords[i].charAt(0).concat("ay"));
+        }
     }
+    document.getElementById("textEditor").value = splitWords.join(" "); //output and replace
 }
