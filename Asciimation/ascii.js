@@ -1,9 +1,4 @@
-// *************** another approach to load js code only after page is fully loaded ********************
-    // function myFunction(){
-    //     // js code here
-    // }
-    // document.addEventListener('DOMContentLoaded', mainFunction);
-// *************** another approach to load js code only after page is fully loaded ********************
+
 
 window.onload = function() { // load js code only when DOM is fully loaded
     'use strict';
