@@ -1,29 +1,33 @@
-$(function () {
-    "use strict";
-    $('#start').click(function () {
-        const $walls = $("#maze .boundary");
-        const $status = $('#status');
-        const $maze = $('#maze');
-        $walls.removeClass('youlose'); // reset walls
-        $status.text("Maze has begin! Find your way through");
+'use strict';
+$(() => {
+    const initMsg = 'Click the "S" to begin.';
+    let lost = false;
+    const lose = () => {
+        lost = true;
+        $('.boundary').addClass('youlose');
+    };
 
-        $walls.mouseenter(function () {
-            $walls.addClass('youlose');
-        });
-
-        $maze.mouseleave(function () {
-            // if you leave the maze div, you lose!
-            $walls.addClass('youlose');
-        });
-
-        $('#end').mouseenter(function () {
-            if ($walls.hasClass('youlose')) {
-                $status.text("You lose :(");
-            } else {
-                $status.text("You win :)");
-            }
-            $walls.off('mouseenter');
-            $maze.off('mouseleave');
-        });
+    $(".boundary").mouseover( () => {
+        $('h2#status').text("Sorry, you lost :[");
+        $('.boundary').mouseover(lose);
     });
+
+    $('#start').click(() => {
+        lost = false;
+        $('h2#status').text(initMsg);
+        $('.boundary').removeClass('youlose');
+        $('#maze').mouseleave(lose);
+    });
+
+    $('#end').mouseenter(() => {
+        const winMsg = 'You win! :]';
+        const loseMsg = 'Sorry, you lost :[';
+        const chosenMsg = lost ? loseMsg : winMsg;
+
+        $('h2#status').text(chosenMsg);
+    });
+
+    $('.boundary.example').click(() => {
+        location.href = '/';
+    }).tooltip();
 });
