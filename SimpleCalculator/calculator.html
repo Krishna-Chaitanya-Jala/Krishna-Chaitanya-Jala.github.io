@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Calculator For Simple Operations</title>
-    </head>
-
-    <body>
-        
-        
-        Enter Numbers <br>
-        <input type="number" name="first"> <br>
-        <input type="number" name="second"> <br>
-        <form action="http://localhost:8080/add.js">
-        <input type="button" value="Addition">        
-        </form>
-        <form action="http://localhost:8080/sub.js">
-        <input type="button" value="Substraction">
-        </form>
-        <form action="http://localhost:8080/mul.js">
-        <input type="button" value="Multiplication">
-        </form>
-        <form action="http://localhost:8080/div.js">
-            <input type="button" value="Division">
-        </form>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h1>Simple Calculator</h1>
+<form action="/calculate">
+    <hr />
+    <label>First Value <input type="text" name="first" /></label>
+    <hr />
+    <label>Second Value <input type="text" name="second" /></label>
+    <hr />
+    <label>Operation Type
+        <select id="operation" name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+    </label>
+    <hr />
+    <button>Submit</button>
+</form>
+</body>
 </html>
